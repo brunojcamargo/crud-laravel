@@ -7,7 +7,9 @@ CRUD em laravel
 ## Dependência
 
 [PHP 8.2](https://www.php.net/downloads.php)
+
 [PostgreSQL 16](https://www.postgresql.org/download/)
+
 [Composer 2.6.5](https://getcomposer.org/download/)
 
 
