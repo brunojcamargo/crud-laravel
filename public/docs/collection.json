@@ -1,0 +1,254 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost"
+        }
+    ],
+    "info": {
+        "name": "Api",
+        "_postman_id": "bc0dda5f-c909-41d5-8fca-a55fbe40e0cc",
+        "description": "Api simples com laravel",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[{\"id\":\"9b073873-afa0-4f3a-9218-fe47387c94b1\",\"code\":410509916,\"name\":\"debitis\",\"description\":\"Quia iste eos illum delectus voluptatem. Nobis fugiat animi neque voluptas corrupti enim sed. Deserunt reiciendis nemo quisquam.\",\"active\":false,\"price\":\"257.01\",\"created_at\":\"2024-01-06T14:59:01.000000Z\",\"updated_at\":\"2024-01-06T14:59:01.000000Z\"},{\"id\":\"9b073873-afe8-4f1a-963e-3ae7a9c6d211\",\"code\":363,\"name\":\"autem\",\"description\":\"Quia sapiente aut neque. Accusantium id eum nobis maxime et. Quia et et sit voluptatum enim odio ut aut. Est eveniet quidem sed vero nihil enim sint consequuntur.\",\"active\":false,\"price\":\"495.43\",\"created_at\":\"2024-01-06T14:59:01.000000Z\",\"updated_at\":\"2024-01-06T14:59:01.000000Z\"},{\"id\":\"9b073873-b027-40ff-b1eb-bae15c022dcf\",\"code\":25,\"name\":\"est\",\"description\":\"Autem libero iusto sed sint et totam facere. Quia et aut omnis id voluptas doloremque saepe. Occaecati eius laboriosam est. Minima ut ut quibusdam tempora odio occaecati.\",\"active\":false,\"price\":\"108.23\",\"created_at\":\"2024-01-06T14:59:01.000000Z\",\"updated_at\":\"2024-01-06T14:59:01.000000Z\"},{\"id\":\"9b073873-b063-4948-921f-659cc9e61724\",\"code\":193,\"name\":\"beatae\",\"description\":\"Harum earum nostrum est. Atque soluta voluptates odio est magni qui cupiditate. Quod dicta dicta exercitationem qui ea. Ut minus ea totam modi esse similique rerum.\",\"active\":false,\"price\":\"191.84\",\"created_at\":\"2024-01-06T14:59:01.000000Z\",\"updated_at\":\"2024-01-06T14:59:01.000000Z\"},{\"id\":\"9b073873-b09e-4a74-b23b-e83a4ddac408\",\"code\":0,\"name\":\"ea\",\"description\":\"Consequatur impedit iste totam facere consequatur fugiat. Totam placeat porro aperiam et. Aspernatur minima assumenda doloribus mollitia. Accusamus officiis temporibus occaecati voluptatem aut assumenda est.\",\"active\":false,\"price\":\"687.09\",\"created_at\":\"2024-01-06T14:59:01.000000Z\",\"updated_at\":\"2024-01-06T14:59:01.000000Z\"},{\"id\":\"9b073873-b0db-47b6-b269-c1364c55ad87\",\"code\":7162921,\"name\":\"debitis\",\"description\":\"Quidem officia magni et tempore est cum qui. Enim tenetur aut aut dolores enim cumque nihil. Eveniet aut dolorum distinctio architecto dolore atque. Ut cupiditate quaerat sit non suscipit totam.\",\"active\":true,\"price\":\"687.53\",\"created_at\":\"2024-01-06T14:59:01.000000Z\",\"updated_at\":\"2024-01-06T14:59:01.000000Z\"},{\"id\":\"9b073873-b114-4219-82c2-340d232f65ad\",\"code\":7,\"name\":\"itaque\",\"description\":\"Omnis culpa cum nobis. Debitis sint assumenda nesciunt necessitatibus minus consequuntur sed ut. Et cumque aliquid tempore exercitationem. Quis ratione inventore tenetur non enim cupiditate.\",\"active\":false,\"price\":\"132.58\",\"created_at\":\"2024-01-06T14:59:01.000000Z\",\"updated_at\":\"2024-01-06T14:59:01.000000Z\"},{\"id\":\"9b073873-b14f-4ac6-bd9c-df4bb98afda8\",\"code\":207800,\"name\":\"qui\",\"description\":\"Ad vel perferendis cum voluptates quae. Sunt rerum facere sed qui vero voluptatem asperiores ea. Tempora maiores iusto aut et incidunt quisquam. Asperiores qui quo dolores magnam doloribus temporibus non dolorum.\",\"active\":true,\"price\":\"945.29\",\"created_at\":\"2024-01-06T14:59:01.000000Z\",\"updated_at\":\"2024-01-06T14:59:01.000000Z\"},{\"id\":\"9b073873-b18a-45c7-b542-ef131a3342de\",\"code\":1336853,\"name\":\"quasi\",\"description\":\"Rerum ex sed error. Provident expedita ducimus harum nostrum.\",\"active\":true,\"price\":\"848.25\",\"created_at\":\"2024-01-06T14:59:01.000000Z\",\"updated_at\":\"2024-01-06T14:59:01.000000Z\"},{\"id\":\"9b074f08-74c4-4553-92f7-2828d8ab39f6\",\"code\":86,\"name\":\"aut\",\"description\":\"Sint sit laudantium repellendus molestiae. Et temporibus quis et debitis qui iure. Velit saepe cumque molestiae voluptatum soluta fuga fuga.\",\"active\":false,\"price\":\"857.55\",\"created_at\":\"2024-01-06T16:02:10.000000Z\",\"updated_at\":\"2024-01-06T16:02:10.000000Z\"},{\"id\":\"9b074f6c-bcad-4635-8d95-f250f967bf71\",\"code\":89,\"name\":\"aut\",\"description\":\"Sint sit laudantium repellendus molestiae. Et temporibus quis et debitis qui iure. Velit saepe cumque molestiae voluptatum soluta fuga fuga.\",\"active\":false,\"price\":\"857.55\",\"created_at\":\"2024-01-06T16:03:16.000000Z\",\"updated_at\":\"2024-01-06T16:03:16.000000Z\"}]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"code\":5,\"name\":\"sequi\",\"description\":\"Et maiores id a sit et est.\",\"active\":true,\"price\":\"84.21\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "9b073873-afa0-4f3a-9218-fe47387c94b1",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "58"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"id\":\"9b073873-afa0-4f3a-9218-fe47387c94b1\",\"code\":410509916,\"name\":\"debitis\",\"description\":\"Quia iste eos illum delectus voluptatem. Nobis fugiat animi neque voluptas corrupti enim sed. Deserunt reiciendis nemo quisquam.\",\"active\":false,\"price\":\"257.01\",\"created_at\":\"2024-01-06T14:59:01.000000Z\",\"updated_at\":\"2024-01-06T14:59:01.000000Z\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "9b073873-afa0-4f3a-9218-fe47387c94b1",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"code\":12,\"name\":\"ut\",\"description\":\"Aliquam iusto dolor accusantium ut.\",\"active\":true,\"price\":\"38285616\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "9b073873-afa0-4f3a-9218-fe47387c94b1",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

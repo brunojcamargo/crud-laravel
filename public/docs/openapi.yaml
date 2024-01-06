@@ -1,0 +1,283 @@
+openapi: 3.0.3
+info:
+  title: Api
+  description: 'Api simples com laravel'
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/products:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example:
+                  -
+                    id: 9b073873-afa0-4f3a-9218-fe47387c94b1
+                    code: 410509916
+                    name: debitis
+                    description: 'Quia iste eos illum delectus voluptatem. Nobis fugiat animi neque voluptas corrupti enim sed. Deserunt reiciendis nemo quisquam.'
+                    active: false
+                    price: '257.01'
+                    created_at: '2024-01-06T14:59:01.000000Z'
+                    updated_at: '2024-01-06T14:59:01.000000Z'
+                  -
+                    id: 9b073873-afe8-4f1a-963e-3ae7a9c6d211
+                    code: 363
+                    name: autem
+                    description: 'Quia sapiente aut neque. Accusantium id eum nobis maxime et. Quia et et sit voluptatum enim odio ut aut. Est eveniet quidem sed vero nihil enim sint consequuntur.'
+                    active: false
+                    price: '495.43'
+                    created_at: '2024-01-06T14:59:01.000000Z'
+                    updated_at: '2024-01-06T14:59:01.000000Z'
+                  -
+                    id: 9b073873-b027-40ff-b1eb-bae15c022dcf
+                    code: 25
+                    name: est
+                    description: 'Autem libero iusto sed sint et totam facere. Quia et aut omnis id voluptas doloremque saepe. Occaecati eius laboriosam est. Minima ut ut quibusdam tempora odio occaecati.'
+                    active: false
+                    price: '108.23'
+                    created_at: '2024-01-06T14:59:01.000000Z'
+                    updated_at: '2024-01-06T14:59:01.000000Z'
+                  -
+                    id: 9b073873-b063-4948-921f-659cc9e61724
+                    code: 193
+                    name: beatae
+                    description: 'Harum earum nostrum est. Atque soluta voluptates odio est magni qui cupiditate. Quod dicta dicta exercitationem qui ea. Ut minus ea totam modi esse similique rerum.'
+                    active: false
+                    price: '191.84'
+                    created_at: '2024-01-06T14:59:01.000000Z'
+                    updated_at: '2024-01-06T14:59:01.000000Z'
+                  -
+                    id: 9b073873-b09e-4a74-b23b-e83a4ddac408
+                    code: 0
+                    name: ea
+                    description: 'Consequatur impedit iste totam facere consequatur fugiat. Totam placeat porro aperiam et. Aspernatur minima assumenda doloribus mollitia. Accusamus officiis temporibus occaecati voluptatem aut assumenda est.'
+                    active: false
+                    price: '687.09'
+                    created_at: '2024-01-06T14:59:01.000000Z'
+                    updated_at: '2024-01-06T14:59:01.000000Z'
+                  -
+                    id: 9b073873-b0db-47b6-b269-c1364c55ad87
+                    code: 7162921
+                    name: debitis
+                    description: 'Quidem officia magni et tempore est cum qui. Enim tenetur aut aut dolores enim cumque nihil. Eveniet aut dolorum distinctio architecto dolore atque. Ut cupiditate quaerat sit non suscipit totam.'
+                    active: true
+                    price: '687.53'
+                    created_at: '2024-01-06T14:59:01.000000Z'
+                    updated_at: '2024-01-06T14:59:01.000000Z'
+                  -
+                    id: 9b073873-b114-4219-82c2-340d232f65ad
+                    code: 7
+                    name: itaque
+                    description: 'Omnis culpa cum nobis. Debitis sint assumenda nesciunt necessitatibus minus consequuntur sed ut. Et cumque aliquid tempore exercitationem. Quis ratione inventore tenetur non enim cupiditate.'
+                    active: false
+                    price: '132.58'
+                    created_at: '2024-01-06T14:59:01.000000Z'
+                    updated_at: '2024-01-06T14:59:01.000000Z'
+                  -
+                    id: 9b073873-b14f-4ac6-bd9c-df4bb98afda8
+                    code: 207800
+                    name: qui
+                    description: 'Ad vel perferendis cum voluptates quae. Sunt rerum facere sed qui vero voluptatem asperiores ea. Tempora maiores iusto aut et incidunt quisquam. Asperiores qui quo dolores magnam doloribus temporibus non dolorum.'
+                    active: true
+                    price: '945.29'
+                    created_at: '2024-01-06T14:59:01.000000Z'
+                    updated_at: '2024-01-06T14:59:01.000000Z'
+                  -
+                    id: 9b073873-b18a-45c7-b542-ef131a3342de
+                    code: 1336853
+                    name: quasi
+                    description: 'Rerum ex sed error. Provident expedita ducimus harum nostrum.'
+                    active: true
+                    price: '848.25'
+                    created_at: '2024-01-06T14:59:01.000000Z'
+                    updated_at: '2024-01-06T14:59:01.000000Z'
+                  -
+                    id: 9b074f08-74c4-4553-92f7-2828d8ab39f6
+                    code: 86
+                    name: aut
+                    description: 'Sint sit laudantium repellendus molestiae. Et temporibus quis et debitis qui iure. Velit saepe cumque molestiae voluptatum soluta fuga fuga.'
+                    active: false
+                    price: '857.55'
+                    created_at: '2024-01-06T16:02:10.000000Z'
+                    updated_at: '2024-01-06T16:02:10.000000Z'
+                  -
+                    id: 9b074f6c-bcad-4635-8d95-f250f967bf71
+                    code: 89
+                    name: aut
+                    description: 'Sint sit laudantium repellendus molestiae. Et temporibus quis et debitis qui iure. Velit saepe cumque molestiae voluptatum soluta fuga fuga.'
+                    active: false
+                    price: '857.55'
+                    created_at: '2024-01-06T16:03:16.000000Z'
+                    updated_at: '2024-01-06T16:03:16.000000Z'
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                code:
+                  type: integer
+                  description: ''
+                  example: 5
+                name:
+                  type: string
+                  description: ''
+                  example: sequi
+                description:
+                  type: string
+                  description: ''
+                  example: 'Et maiores id a sit et est.'
+                active:
+                  type: boolean
+                  description: ''
+                  example: true
+                price:
+                  type: number
+                  description: 'Must match the regex /^\d+(\.\d{1,2})?$/.'
+                  example: '84.21'
+              required:
+                - code
+                - name
+                - description
+                - active
+                - price
+      security: []
+  '/api/products/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  id: 9b073873-afa0-4f3a-9218-fe47387c94b1
+                  code: 410509916
+                  name: debitis
+                  description: 'Quia iste eos illum delectus voluptatem. Nobis fugiat animi neque voluptas corrupti enim sed. Deserunt reiciendis nemo quisquam.'
+                  active: false
+                  price: '257.01'
+                  created_at: '2024-01-06T14:59:01.000000Z'
+                  updated_at: '2024-01-06T14:59:01.000000Z'
+                properties:
+                  id:
+                    type: string
+                    example: 9b073873-afa0-4f3a-9218-fe47387c94b1
+                  code:
+                    type: integer
+                    example: 410509916
+                  name:
+                    type: string
+                    example: debitis
+                  description:
+                    type: string
+                    example: 'Quia iste eos illum delectus voluptatem. Nobis fugiat animi neque voluptas corrupti enim sed. Deserunt reiciendis nemo quisquam.'
+                  active:
+                    type: boolean
+                    example: false
+                  price:
+                    type: string
+                    example: '257.01'
+                  created_at:
+                    type: string
+                    example: '2024-01-06T14:59:01.000000Z'
+                  updated_at:
+                    type: string
+                    example: '2024-01-06T14:59:01.000000Z'
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                code:
+                  type: integer
+                  description: ''
+                  example: 12
+                name:
+                  type: string
+                  description: ''
+                  example: ut
+                description:
+                  type: string
+                  description: ''
+                  example: 'Aliquam iusto dolor accusantium ut.'
+                active:
+                  type: boolean
+                  description: ''
+                  example: true
+                price:
+                  type: number
+                  description: 'Must match the regex /^\d+(\.\d{1,2})?$/.'
+                  example: '38285616'
+              required:
+                - code
+                - name
+                - description
+                - active
+                - price
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the product.'
+        example: 9b073873-afa0-4f3a-9218-fe47387c94b1
+        required: true
+        schema:
+          type: string
+tags:
+  -
+    name: Endpoints
+    description: ''
