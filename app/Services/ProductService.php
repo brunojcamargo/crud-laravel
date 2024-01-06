@@ -14,4 +14,17 @@ class ProductService
     {
         return $this->model->all();
     }
+
+    public function create(array $req) : Product|string
+    {
+        try {
+            $product = new Product($req);
+            if(!$product->save()){
+                return 'Error on save product';
+            }
+            return $product;
+        } catch (\Exception $th) {
+            return 'Internal error';
+        }
+    }
 }
