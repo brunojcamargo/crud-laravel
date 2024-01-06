@@ -13,11 +13,9 @@ WORKDIR /var/www/html
 
 COPY . /var/www/html
 
-RUN composer install --optimize-autoloader --no-dev
 
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
-RUN php artisan key:generate
 
 EXPOSE 9000
 

@@ -39,9 +39,12 @@ Suba os containers
     docker compose up -d
 ```
 
-Rode as migrations
+Instalação
 ```bash
-    docker exec -it laravel-app php artisan migrate --force
+    docker exec -it laravel-app composer install `
+; docker exec -it laravel-app php artisan key:generate `
+; docker exec -it laravel-app php artisan migrate --force
+
 ```
 
 ## Rodando localmente
