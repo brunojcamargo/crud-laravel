@@ -6,12 +6,43 @@ CRUD em laravel
 
 ## Dependência
 
+[Docker](https://www.docker.com/products/docker-desktop/)
+
+Ou
+
 [PHP 8.2](https://www.php.net/downloads.php)
 
 [PostgreSQL 16](https://www.postgresql.org/download/)
 
 [Composer 2.6.5](https://getcomposer.org/download/)
 
+## Rodando com Docker
+Clone o projeto
+
+```bash
+  git clone https://github.com/brunojcamargo/crud-laravel
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd crud-laravel
+```
+
+Crie o .env
+```bash
+    cp .env.example .env
+```
+
+Suba os containers
+```bash
+    docker compose up -d
+```
+
+Rode as migrations
+```bash
+    docker exec -it laravel-app php artisan migrate --force
+```
 
 ## Rodando localmente
 
