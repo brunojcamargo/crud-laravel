@@ -17,7 +17,7 @@ class ProductController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
+     * Listagem de produtos
      */
     public function index()
     {
@@ -25,7 +25,7 @@ class ProductController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Cadastro de produtos
      */
     public function store(CreateProductRequest $request)
     {
@@ -36,7 +36,7 @@ class ProductController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Consulta produto
      */
     public function show(Product $product)
     {
@@ -44,7 +44,7 @@ class ProductController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Atualização de produto
      */
     public function update(UpdateProductRequest $request, Product $product)
     {
@@ -55,7 +55,7 @@ class ProductController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Exclusão de produto
      */
     public function destroy(Product $product)
     {

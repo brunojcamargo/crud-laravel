@@ -5,12 +5,12 @@ info:
   version: 1.0.0
 servers:
   -
-    url: 'http://localhost'
+    url: 'http://localhost:8090'
 paths:
   /api/products:
     get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
+      summary: 'Listagem de produtos'
+      operationId: listagemDeProdutos
       description: ''
       parameters: []
       responses:
@@ -126,8 +126,8 @@ paths:
         - Endpoints
       security: []
     post:
-      summary: 'Store a newly created resource in storage.'
-      operationId: storeANewlyCreatedResourceInStorage
+      summary: 'Cadastro de produtos'
+      operationId: cadastroDeProdutos
       description: ''
       parameters: []
       responses: {  }
@@ -143,15 +143,15 @@ paths:
                 code:
                   type: integer
                   description: ''
-                  example: 5
+                  example: 19
                 name:
                   type: string
                   description: ''
-                  example: sequi
+                  example: eos
                 description:
                   type: string
                   description: ''
-                  example: 'Et maiores id a sit et est.'
+                  example: 'Sed sunt voluptas commodi repellat est.'
                 active:
                   type: boolean
                   description: ''
@@ -159,7 +159,7 @@ paths:
                 price:
                   type: number
                   description: 'Must match the regex /^\d+(\.\d{1,2})?$/.'
-                  example: '84.21'
+                  example: '39126.63'
               required:
                 - code
                 - name
@@ -169,8 +169,8 @@ paths:
       security: []
   '/api/products/{id}':
     get:
-      summary: 'Display the specified resource.'
-      operationId: displayTheSpecifiedResource
+      summary: 'Consulta produto'
+      operationId: consultaProduto
       description: ''
       parameters: []
       responses:
@@ -218,8 +218,8 @@ paths:
         - Endpoints
       security: []
     put:
-      summary: 'Update the specified resource in storage.'
-      operationId: updateTheSpecifiedResourceInStorage
+      summary: 'Atualização de produto'
+      operationId: atualizaoDeProduto
       description: ''
       parameters: []
       responses: {  }
@@ -235,23 +235,23 @@ paths:
                 code:
                   type: integer
                   description: ''
-                  example: 12
+                  example: 20
                 name:
                   type: string
                   description: ''
-                  example: ut
+                  example: nulla
                 description:
                   type: string
                   description: ''
-                  example: 'Aliquam iusto dolor accusantium ut.'
+                  example: 'Perspiciatis exercitationem ipsum vel asperiores quia.'
                 active:
                   type: boolean
                   description: ''
-                  example: true
+                  example: false
                 price:
                   type: number
                   description: 'Must match the regex /^\d+(\.\d{1,2})?$/.'
-                  example: '38285616'
+                  example: '3.3'
               required:
                 - code
                 - name
@@ -260,8 +260,8 @@ paths:
                 - price
       security: []
     delete:
-      summary: 'Remove the specified resource from storage.'
-      operationId: removeTheSpecifiedResourceFromStorage
+      summary: 'Exclusão de produto'
+      operationId: exclusoDeProduto
       description: ''
       parameters: []
       responses: {  }

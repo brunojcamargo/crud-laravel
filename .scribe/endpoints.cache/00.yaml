@@ -12,7 +12,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Display a listing of the resource.'
+      title: 'Listagem de produtos'
       description: ''
       authenticated: false
       custom: []
@@ -53,7 +53,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Store a newly created resource in storage.'
+      title: 'Cadastro de produtos'
       description: ''
       authenticated: false
       custom: []
@@ -69,7 +69,7 @@ endpoints:
         name: code
         description: ''
         required: true
-        example: 5
+        example: 19
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -78,7 +78,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: sequi
+        example: eos
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -87,7 +87,7 @@ endpoints:
         name: description
         description: ''
         required: true
-        example: 'Et maiores id a sit et est.'
+        example: 'Sed sunt voluptas commodi repellat est.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -105,17 +105,17 @@ endpoints:
         name: price
         description: 'Must match the regex /^\d+(\.\d{1,2})?$/.'
         required: true
-        example: '84.21'
+        example: '39126.63'
         type: number
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      code: 5
-      name: sequi
-      description: 'Et maiores id a sit et est.'
+      code: 19
+      name: eos
+      description: 'Sed sunt voluptas commodi repellat est.'
       active: true
-      price: '84.21'
+      price: '39126.63'
     fileParameters: []
     responses: []
     responseFields: []
@@ -133,7 +133,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Display the specified resource.'
+      title: 'Consulta produto'
       description: ''
       authenticated: false
       custom: []
@@ -185,7 +185,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update the specified resource in storage.'
+      title: 'Atualização de produto'
       description: ''
       authenticated: false
       custom: []
@@ -211,7 +211,7 @@ endpoints:
         name: code
         description: ''
         required: true
-        example: 12
+        example: 20
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -220,7 +220,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: ut
+        example: nulla
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -229,7 +229,7 @@ endpoints:
         name: description
         description: ''
         required: true
-        example: 'Aliquam iusto dolor accusantium ut.'
+        example: 'Perspiciatis exercitationem ipsum vel asperiores quia.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -238,7 +238,7 @@ endpoints:
         name: active
         description: ''
         required: true
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -247,17 +247,17 @@ endpoints:
         name: price
         description: 'Must match the regex /^\d+(\.\d{1,2})?$/.'
         required: true
-        example: '38285616'
+        example: '3.3'
         type: number
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      code: 12
-      name: ut
-      description: 'Aliquam iusto dolor accusantium ut.'
-      active: true
-      price: '38285616'
+      code: 20
+      name: nulla
+      description: 'Perspiciatis exercitationem ipsum vel asperiores quia.'
+      active: false
+      price: '3.3'
     fileParameters: []
     responses: []
     responseFields: []
@@ -275,7 +275,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Remove the specified resource from storage.'
+      title: 'Exclusão de produto'
       description: ''
       authenticated: false
       custom: []

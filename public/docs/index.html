@@ -22,11 +22,11 @@
     <style id="language-style">
         /* starts out as display none and is replaced with js later  */
                     body .content .bash-example code { display: none; }
-                    body .content .javascript-example code { display: none; }
+                    body .content .php-example code { display: none; }
             </style>
 
     <script>
-        var tryItOutBaseUrl = "http://localhost";
+        var tryItOutBaseUrl = "http://localhost:8090";
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
@@ -36,7 +36,7 @@
 
 </head>
 
-<body data-languages="[&quot;bash&quot;,&quot;javascript&quot;]">
+<body data-languages="[&quot;bash&quot;,&quot;php&quot;]">
 
 <a href="#" id="nav-button">
     <span>
@@ -48,7 +48,7 @@
     
             <div class="lang-selector">
                                             <button type="button" class="lang-button" data-language-name="bash">bash</button>
-                                            <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
+                                            <button type="button" class="lang-button" data-language-name="php">php</button>
                     </div>
     
     <div class="search">
@@ -72,19 +72,19 @@
                 </li>
                                     <ul id="tocify-subheader-endpoints" class="tocify-subheader">
                                                     <li class="tocify-item level-2" data-unique="endpoints-GETapi-products">
-                                <a href="#endpoints-GETapi-products">Display a listing of the resource.</a>
+                                <a href="#endpoints-GETapi-products">Listagem de produtos</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-POSTapi-products">
-                                <a href="#endpoints-POSTapi-products">Store a newly created resource in storage.</a>
+                                <a href="#endpoints-POSTapi-products">Cadastro de produtos</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-products--id-">
-                                <a href="#endpoints-GETapi-products--id-">Display the specified resource.</a>
+                                <a href="#endpoints-GETapi-products--id-">Consulta produto</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-PUTapi-products--id-">
-                                <a href="#endpoints-PUTapi-products--id-">Update the specified resource in storage.</a>
+                                <a href="#endpoints-PUTapi-products--id-">Atualização de produto</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-DELETEapi-products--id-">
-                                <a href="#endpoints-DELETEapi-products--id-">Remove the specified resource from storage.</a>
+                                <a href="#endpoints-DELETEapi-products--id-">Exclusão de produto</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -107,7 +107,7 @@
         <h1 id="introduction">Introduction</h1>
 <p>Api simples com laravel</p>
 <aside>
-    <strong>Base URL</strong>: <code>http://localhost</code>
+    <strong>Base URL</strong>: <code>http://localhost:8090</code>
 </aside>
 <p>This documentation aims to provide all the information you need to work with our API.</p>
 <aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
@@ -120,7 +120,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 
     
 
-                                <h2 id="endpoints-GETapi-products">Display a listing of the resource.</h2>
+                                <h2 id="endpoints-GETapi-products">Listagem de produtos</h2>
 
 <p>
 </p>
@@ -133,25 +133,25 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/products" \
+    --get "http://localhost:8090/api/products" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/products"
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$url = 'http://localhost:8090/api/products';
+$response = $client-&gt;get(
+    $url,
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
 );
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 </span>
 
@@ -355,7 +355,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="endpoints-POSTapi-products">Store a newly created resource in storage.</h2>
+                    <h2 id="endpoints-POSTapi-products">Cadastro de produtos</h2>
 
 <p>
 </p>
@@ -368,42 +368,40 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/products" \
+    "http://localhost:8090/api/products" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"code\": 5,
-    \"name\": \"sequi\",
-    \"description\": \"Et maiores id a sit et est.\",
+    \"code\": 19,
+    \"name\": \"eos\",
+    \"description\": \"Sed sunt voluptas commodi repellat est.\",
     \"active\": true,
-    \"price\": \"84.21\"
+    \"price\": \"39126.63\"
 }"
 </code></pre></div>
 
 
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/products"
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$url = 'http://localhost:8090/api/products';
+$response = $client-&gt;post(
+    $url,
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'code' =&gt; 19,
+            'name' =&gt; 'eos',
+            'description' =&gt; 'Sed sunt voluptas commodi repellat est.',
+            'active' =&gt; true,
+            'price' =&gt; '39126.63',
+        ],
+    ]
 );
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "code": 5,
-    "name": "sequi",
-    "description": "Et maiores id a sit et est.",
-    "active": true,
-    "price": "84.21"
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre></div>
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 </span>
 
@@ -485,10 +483,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="code"                data-endpoint="POSTapi-products"
-               value="5"
+               value="19"
                data-component="body">
     <br>
-<p>Example: <code>5</code></p>
+<p>Example: <code>19</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
@@ -496,10 +494,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTapi-products"
-               value="sequi"
+               value="eos"
                data-component="body">
     <br>
-<p>Example: <code>sequi</code></p>
+<p>Example: <code>eos</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -507,10 +505,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="POSTapi-products"
-               value="Et maiores id a sit et est."
+               value="Sed sunt voluptas commodi repellat est."
                data-component="body">
     <br>
-<p>Example: <code>Et maiores id a sit et est.</code></p>
+<p>Example: <code>Sed sunt voluptas commodi repellat est.</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>active</code></b>&nbsp;&nbsp;
@@ -539,14 +537,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="price"                data-endpoint="POSTapi-products"
-               value="84.21"
+               value="39126.63"
                data-component="body">
     <br>
-<p>Must match the regex /^\d+(.\d{1,2})?$/. Example: <code>84.21</code></p>
+<p>Must match the regex /^\d+(.\d{1,2})?$/. Example: <code>39126.63</code></p>
         </div>
         </form>
 
-                    <h2 id="endpoints-GETapi-products--id-">Display the specified resource.</h2>
+                    <h2 id="endpoints-GETapi-products--id-">Consulta produto</h2>
 
 <p>
 </p>
@@ -559,25 +557,25 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/products/9b073873-afa0-4f3a-9218-fe47387c94b1" \
+    --get "http://localhost:8090/api/products/9b073873-afa0-4f3a-9218-fe47387c94b1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/products/9b073873-afa0-4f3a-9218-fe47387c94b1"
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$url = 'http://localhost:8090/api/products/9b073873-afa0-4f3a-9218-fe47387c94b1';
+$response = $client-&gt;get(
+    $url,
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
 );
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 </span>
 
@@ -691,7 +689,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="endpoints-PUTapi-products--id-">Update the specified resource in storage.</h2>
+                    <h2 id="endpoints-PUTapi-products--id-">Atualização de produto</h2>
 
 <p>
 </p>
@@ -704,42 +702,40 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/products/9b073873-afa0-4f3a-9218-fe47387c94b1" \
+    "http://localhost:8090/api/products/9b073873-afa0-4f3a-9218-fe47387c94b1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"code\": 12,
-    \"name\": \"ut\",
-    \"description\": \"Aliquam iusto dolor accusantium ut.\",
-    \"active\": true,
-    \"price\": \"38285616\"
+    \"code\": 20,
+    \"name\": \"nulla\",
+    \"description\": \"Perspiciatis exercitationem ipsum vel asperiores quia.\",
+    \"active\": false,
+    \"price\": \"3.3\"
 }"
 </code></pre></div>
 
 
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/products/9b073873-afa0-4f3a-9218-fe47387c94b1"
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$url = 'http://localhost:8090/api/products/9b073873-afa0-4f3a-9218-fe47387c94b1';
+$response = $client-&gt;put(
+    $url,
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'code' =&gt; 20,
+            'name' =&gt; 'nulla',
+            'description' =&gt; 'Perspiciatis exercitationem ipsum vel asperiores quia.',
+            'active' =&gt; false,
+            'price' =&gt; '3.3',
+        ],
+    ]
 );
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "code": 12,
-    "name": "ut",
-    "description": "Aliquam iusto dolor accusantium ut.",
-    "active": true,
-    "price": "38285616"
-};
-
-fetch(url, {
-    method: "PUT",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre></div>
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 </span>
 
@@ -837,10 +833,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="code"                data-endpoint="PUTapi-products--id-"
-               value="12"
+               value="20"
                data-component="body">
     <br>
-<p>Example: <code>12</code></p>
+<p>Example: <code>20</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
@@ -848,10 +844,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTapi-products--id-"
-               value="ut"
+               value="nulla"
                data-component="body">
     <br>
-<p>Example: <code>ut</code></p>
+<p>Example: <code>nulla</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -859,10 +855,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="PUTapi-products--id-"
-               value="Aliquam iusto dolor accusantium ut."
+               value="Perspiciatis exercitationem ipsum vel asperiores quia."
                data-component="body">
     <br>
-<p>Example: <code>Aliquam iusto dolor accusantium ut.</code></p>
+<p>Example: <code>Perspiciatis exercitationem ipsum vel asperiores quia.</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>active</code></b>&nbsp;&nbsp;
@@ -883,7 +879,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>true</code></p>
+<p>Example: <code>false</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>price</code></b>&nbsp;&nbsp;
@@ -891,14 +887,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="price"                data-endpoint="PUTapi-products--id-"
-               value="38285616"
+               value="3.3"
                data-component="body">
     <br>
-<p>Must match the regex /^\d+(.\d{1,2})?$/. Example: <code>38285616</code></p>
+<p>Must match the regex /^\d+(.\d{1,2})?$/. Example: <code>3.3</code></p>
         </div>
         </form>
 
-                    <h2 id="endpoints-DELETEapi-products--id-">Remove the specified resource from storage.</h2>
+                    <h2 id="endpoints-DELETEapi-products--id-">Exclusão de produto</h2>
 
 <p>
 </p>
@@ -911,25 +907,25 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/products/9b073873-afa0-4f3a-9218-fe47387c94b1" \
+    "http://localhost:8090/api/products/9b073873-afa0-4f3a-9218-fe47387c94b1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/products/9b073873-afa0-4f3a-9218-fe47387c94b1"
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$url = 'http://localhost:8090/api/products/9b073873-afa0-4f3a-9218-fe47387c94b1';
+$response = $client-&gt;delete(
+    $url,
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
 );
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "DELETE",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
 
 </span>
 
@@ -1025,7 +1021,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <div class="dark-box">
                     <div class="lang-selector">
                                                         <button type="button" class="lang-button" data-language-name="bash">bash</button>
-                                                        <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
+                                                        <button type="button" class="lang-button" data-language-name="php">php</button>
                             </div>
             </div>
 </div>
