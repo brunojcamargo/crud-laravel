@@ -27,4 +27,16 @@ class ProductService
             return 'Internal error';
         }
     }
+
+    public function update(array $req, Product $product) : Product|string
+    {
+        try {
+            if(!$product->update($req)){
+                return 'Error on update product';
+            }
+            return $product;
+        } catch (\Exception $th) {
+            return 'Internal error';
+        }
+    }
 }

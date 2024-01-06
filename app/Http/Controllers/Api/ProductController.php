@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\CreateProductRequest;
+use App\Http\Requests\Api\UpdateProductRequest;
 use App\Models\Product;
 use App\Services\ProductService;
 use Illuminate\Http\Request;
@@ -46,9 +47,12 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateProductRequest $request, Product $product)
     {
-        //
+        $newProduct = $this->service->update($request->all(), $product);
+        return response()->json($newProduct, ($newProduct instanceof Product) ?
+            Response::HTTP_OK :
+            Response::HTTP_INTERNAL_SERVER_ERROR);
     }
 
     /**
