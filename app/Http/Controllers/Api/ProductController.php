@@ -7,7 +7,6 @@ use App\Http\Requests\Api\CreateProductRequest;
 use App\Http\Requests\Api\UpdateProductRequest;
 use App\Models\Product;
 use App\Services\ProductService;
-use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class ProductController extends Controller
@@ -58,8 +57,10 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Product $product)
     {
-        //
+        return response()->json('',($this->service->delete($product))?
+        Response::HTTP_NO_CONTENT :
+        Response::HTTP_INTERNAL_SERVER_ERROR);
     }
 }

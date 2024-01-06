@@ -39,4 +39,13 @@ class ProductService
             return 'Internal error';
         }
     }
+
+    public function delete(Product $product) : bool
+    {
+        try {
+            return $product->delete();
+        } catch (\Exception $th) {
+            return false;
+        }
+    }
 }
